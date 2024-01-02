@@ -1,0 +1,230 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  /*
+      Blue: hsl(207, 90%, 61%)
+      Purple: hsl(250, 66%, 75%)
+      Pink: hsl(356, 66%, 75%)
+      Teal: hsl(174, 63%, 62%)
+  */
+
+  --hue: 207;
+  --sat: 90%;
+  --lig: 61%;
+  --first-color: hsl(var(--hue), var(--sat), var(--lig));
+  --first-color-alt: hsl(var(--hue), var(--sat), 57%); /* -4% */
+  --title-color: hsl(var(--hue), 12%, 15%);
+  --text-color: hsl(var(--hue), 12%, 45%);
+  --text-color-light: hsl(var(--hue), 8%, 75%);
+  --text-color-lighten: hsl(var(--hue), 8%, 92%);
+  --body-color: hsl(var(--hue), 100%, 99%);
+  --container-color: #fff;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Poppins', sans-serif;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+}
+
+/* @media screen and (min-width: 968px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+} */
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+  font-family: var(--body-font);
+}
+
+
+/* body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: .3s; /* For animation dark mode */
+} */
+
+h1, h2, h3 {
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  
+}
+
+.darkMode{
+  background-color: rgb(30, 30, 30);
+  color: rgb(246, 246, 246);
+}
+
+
+/* icons */  
+.main-page .topIcon i{
+  font-size: 30px;
+  cursor: pointer;
+  
+}
+.topContainer{
+  margin-top: 20px;
+  
+}
+/* profile */
+.profileContainer .row .col img{
+  width: 10rem;
+
+}
+
+.profileIcons i{
+  font-size: 25px;
+  transition: all .3s ease;
+  border: 2px solid transparent;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+}
+.profileIcons i:hover{
+  color: var(--first-color);
+  border-bottom: 2px solid var(--first-color);
+}
+
+.animatedIcons img{
+  background-color:white;
+  width: 3rem;
+}
+.animatedIcons .row {
+  border: 2px solid white;
+  color: black;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.5);
+} 
+
+
+/* buttons */
+
+button.primaryButton{
+  background-color: var(--first-color);
+  border: none;
+height: 3rem;
+}
+
+.buttonSection a.smallDownload i{
+  font-size: 0px;
+}
+
+.buttonSection a i{
+  font-size: 40px;
+  border: none;
+  border-radius: 5px;
+  transition: all .3s ease;
+
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+}
+
+
+.buttonSection a i:hover{
+  
+  background-color: var(--first-color);
+ 
+}
+
+/* cards */
+.cardBody img{
+  width: 20rem;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.cardWrapper{
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+/* about */
+img.heroImage{
+  width: 15rem;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+img#heroAsset{
+  width: 17rem;
+}
+
+.footer{
+  height: 310px;
+  /* background-color: #645CBB; */
+  /* background-color: #645CBB; */
+  background-image: linear-gradient(to right, #645cbb, #9459b6, #ba56ab, #d7569b, #ec5d89);
+ 
+}
+.footer a{
+  color: black;
+}
+.searchBox input{
+  height: 3rem;
+  width: 20rem;
+  border-radius: 10px;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+@media(max-width:960px){
+
+  .searchBox input{
+    width: 10rem;
+    
+  }
+}
+
+.bottomPart{
+  width: 100%;
+  height: 10px;
+}
+
+
+/* time */
+
